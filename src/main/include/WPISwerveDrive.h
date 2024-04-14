@@ -26,7 +26,7 @@ struct SwerveConfig{
     //std::array<SwerveModule, 4>& modules;
 };
 
-class WPISwerveDrive : public SwerveDrive
+class WPISwerveDrive : public SwerveDrive, frc::SubsystemBase
 {
     public:
         WPISwerveDrive() = default;
