@@ -13,8 +13,11 @@ void TeleopDriveCommand::Initialize()
 void TeleopDriveCommand::Execute()
 {
     // TODO - read joystick axis
-
+    double xTranslation = -m_controller.GetLeftY();
+    double yTranslation = -m_controller.GetLeftX();
+    double rotation = -m_controller.GetRightX();
     // TODO - command swerve
+    m_swerve.Drive(xTranslation, yTranslation, rotation);
 }
 
 bool TeleopDriveCommand::IsFinished()
@@ -25,4 +28,5 @@ bool TeleopDriveCommand::IsFinished()
 void TeleopDriveCommand::End(bool interrupted)
 {
     // do nothing
+    m_swerve.Drive(0.0,0.0,0.0);
 }
