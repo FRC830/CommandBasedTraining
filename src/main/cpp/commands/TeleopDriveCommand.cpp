@@ -1,11 +1,11 @@
 #include "commands/TeleopDriveCommand.h"
 
-TeleopDriveCommand::TeleopDriveCommand(frc::XboxController& controller, SwerveDrive& swerve)
+TeleopDriveCommand::TeleopDriveCommand(frc::XboxController& controller, WPISwerveDrive& swerve)
     : m_controller(controller)
     , m_swerve(swerve)
 {}
 
-void TeleopDriveCommand::Intialize()
+void TeleopDriveCommand::Initialize()
 {
     // do nothing
 }

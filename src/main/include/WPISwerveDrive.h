@@ -9,6 +9,7 @@
 #include <frc/geometry/Pose2d.h>
 #include <frc/kinematics/ChassisSpeeds.h>
 #include <frc/DriverStation.h>
+#include "frc2/command/SubsystemBase.h"
 
 struct SwerveConfig{
     bool idle_mode;
@@ -26,7 +27,7 @@ struct SwerveConfig{
     //std::array<SwerveModule, 4>& modules;
 };
 
-class WPISwerveDrive : public SwerveDrive, frc::SubsystemBase
+class WPISwerveDrive : public SwerveDrive, frc2::SubsystemBase
 {
     public:
         WPISwerveDrive() = default;
